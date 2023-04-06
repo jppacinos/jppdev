@@ -34,7 +34,7 @@ export default function About() {
           </div>
 
           <div className="mb-5 py-3">
-            <h3 className="text-2xl font-semibold mb-3 title">Skills and Abilities</h3>
+            <h2 className="text-2xl font-semibold mb-3 title">Skills and Abilities</h2>
             <p className="paragraph mb-5">
               I specialize in web development using PHP and commonly work with MySQL and SQLite
               databases. Knowledgeable in using popular frameworks such as Laravel, React, and Vue
@@ -55,7 +55,7 @@ export default function About() {
           </div>
 
           <div className="mb-5 py-3">
-            <h3 className="text-2xl font-semibold mb-3 title">Interests</h3>
+            <h2 className="text-2xl font-semibold mb-3 title">Interests</h2>
             <p className="paragraph">
               I am also passionate about exploring new technologies and discovering how they can be
               applied to real-world problems. It&apos;s always exciting to learn about the latest
@@ -66,7 +66,7 @@ export default function About() {
           </div>
 
           <div className="mb-5 py-3">
-            <h3 className="text-2xl font-semibold mb-3 title">Professional Values</h3>
+            <h2 className="text-2xl font-semibold mb-3 title">Professional Values</h2>
             <p className="paragraph">
               I take pride in my work and strive to deliver the best possible results. Good
               attention to detail, clear communication, and a strong work ethic are the keys to
@@ -77,7 +77,7 @@ export default function About() {
           </div>
 
           <div className="mb-5 py-3">
-            <h3 className="text-2xl font-semibold mb-3 title">Conclusion</h3>
+            <h2 className="text-2xl font-semibold mb-3 title">Conclusion</h2>
             <p className="paragraph">
               Thank you for taking the time to learn a little bit about me and my journey in web
               development and software engineering. I am passionate about creating efficient,
