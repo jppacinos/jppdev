@@ -37,7 +37,7 @@ const AppHeader = (): JSX.Element => {
                 <AppThemeToggle />
 
                 <a
-                  href="https://github.com/jppacinos/"
+                  href="https://github.com/jppacinos/jppdev"
                   target="__blank"
                   rel="noreferrer external"
                   aria-label="jhon peter github"
