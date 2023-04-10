@@ -14,25 +14,25 @@ const AppHeader = (): JSX.Element => {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-sm dark:bg-transparent">
       <AppContainer>
-        <div className="flex justify-between content-center py-3 sm:py-6">
+        <div className="flex flex-row flex-nowrap justify-between sm:items-center py-3 sm:py-6">
           <div className="flex flex-col space-y-3">
             <AppLogo />
 
             <div className="block sm:hidden">
-              <ul className="flex space-x-5 sm:space-x-6 md:space-x-8 text-sm font-semibold text-slate-700 dark:text-slate-200">
+              <ul className="flex space-x-5 sm:space-x-6 md:space-x-8 text-sm">
                 <NavLists />
               </ul>
             </div>
           </div>
 
-          <div className="flex sm:divide-x sm:divide-solid space-x-4 md:space-x-8">
+          <div className="flex sm:divide-x sm:divide-solid dark:divide-slate-600 space-x-4 md:space-x-8">
             <div className="hidden sm:block">
-              <ul className="flex space-x-4 sm:space-x-6 md:space-x-8 text-md font-semibold text-slate-700 dark:text-slate-200">
+              <ul className="flex space-x-4 sm:space-x-6 md:space-x-8 text-md">
                 <NavLists />
               </ul>
             </div>
 
-            <div className="ml-4 pl-4 md:ml-6 md:pl-6">
+            <div className="ml-4 pl-4 md:ml-6 md:pl-6 mt-1 sm:mt-auto">
               <div className="flex space-x-5">
                 <AppThemeToggle />
 
@@ -89,9 +89,7 @@ function AppNavLink({ children, href }: { children: ReactNode; href: Url }): JSX
   return (
     <Link
       href={href}
-      className={`btn-blue ${
-        router.pathname == href ? 'text-blue-600 dark:text-blue-400' : ''
-      }`.trimEnd()}
+      className={`btn-primary ${router.pathname == href ? 'btn-primary-active' : ''}`.trimEnd()}
     >
       {children}
     </Link>

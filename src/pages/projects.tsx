@@ -18,9 +18,9 @@ export default function Projects({ repos }: InferGetStaticPropsType<typeof getSt
         <AppContainer>
           <div className="my-10">
             <h1 className="text-2xl font-semibold mb-3">
-              <div className="flex space-x-3 title">Projects</div>
+              <div className="flex space-x-3">Projects</div>
             </h1>
-            <p className="paragraph ">Explore my past work sourced from GitHub {':)'}</p>
+            <p>Explore my past work sourced from GitHub {':)'}</p>
           </div>
 
           <RepoGroup>
