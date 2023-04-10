@@ -28,9 +28,7 @@ export default function Home() {
                   unoptimized
                 />
               </div>
-              <h1 className="text-3xl font-semibold mb-5 dark:text-slate-300">
-                Jhon Peter Pacinos
-              </h1>
+              <h1 className="text-3xl font-semibold mb-5">Jhon Peter Pacinos</h1>
               <p>Welcome to My Digital World! 👋</p>
               <p className="mb-3">
                 Sharing My Journey Through Web Development and Software Engineering.
