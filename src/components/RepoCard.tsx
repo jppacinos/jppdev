@@ -28,22 +28,22 @@ const RepoCard = ({ data }: RepoCardProps): JSX.Element => {
   return (
     <div className="repo-card">
       <div className="mb-5">
-        <div className="flex flex-wrap items-baseline md:space-x-3 mb-2">
-          <a href={data.html_url} target="__blank">
-            <h2 className="text-slate-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors mr-3 md:mr-auto ">
+        <div className="flex flex-wrap items-center space-x-1 space-y-1 -ml-1 -mt-1 mb-2">
+          <span></span>
+
+          <a href={data.html_url} className="pr-3" target="__blank">
+            <h2 className="text-slate-900 dark:text-white font-semibold hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               {data.name}
             </h2>
           </a>
 
-          {data.is_template && <Pill>Template</Pill>}
-
-          {data.topics.length !== 0 && (
-            <div className="space-x-1">
-              {data.topics.map((topic, i) => (
-                <Pill key={i}>{topic}</Pill>
-              ))}
-            </div>
+          {data.is_template && (
+            <span className="pr-2">
+              <Pill>Template</Pill>
+            </span>
           )}
+
+          {data.topics.length !== 0 && data.topics.map((topic, i) => <Pill key={i}>{topic}</Pill>)}
 
           {data.homepage && (
             <a
@@ -63,7 +63,7 @@ const RepoCard = ({ data }: RepoCardProps): JSX.Element => {
         </p>
       </div>
 
-      <div className="mb-5 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-5">
+      <div className="mb-3 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-5">
         <div className="flex space-x-2">
           <CalendarIcon width="18" height="18" className="fill-slate-400" />
           <RepoDate date={data.updated_at} />
@@ -85,7 +85,8 @@ const RepoCard = ({ data }: RepoCardProps): JSX.Element => {
         </div>
       </div>
 
-      <div className="flex flex-wrap space-x-2">
+      <div className="flex flex-wrap items-center space-x-2 space-y-2 -ml-2">
+        <span></span>
         {Object.keys(data.languages).map((lang, i) => (
           <Pill key={i}>{lang}</Pill>
         ))}
