@@ -31,16 +31,16 @@ export default function Home() {
               <h1 className="text-3xl font-semibold mb-5 dark:text-slate-300">
                 Jhon Peter Pacinos
               </h1>
-              <p className="paragraph">Welcome to My Digital World! 👋</p>
-              <p className="paragraph mb-3">
+              <p>Welcome to My Digital World! 👋</p>
+              <p className="mb-3">
                 Sharing My Journey Through Web Development and Software Engineering.
               </p>
-              <p className="paragraph mb-3">
+              <p className="mb-3">
                 I am a software engineer specializing in web development. I build full-stack
                 applications and love programming, easy-to-understand user interfaces, and simple
                 and efficient code implementations.
               </p>
-              <p className="paragraph my-10">{'>'} Hello World!</p>
+              <p className="my-10">{'>'} Hello World!</p>
             </div>
 
             <Link

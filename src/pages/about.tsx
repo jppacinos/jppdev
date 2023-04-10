@@ -20,13 +20,13 @@ export default function About() {
             <h1 className="text-2xl font-semibold title mb-3">
               <div className="flex space-x-3">About Me</div>
             </h1>
-            <p className="paragraph mb-2">
+            <p className="mb-2">
               I am <span className="font-semibold">Jhon Peter</span>, a software engineer
               specializing in web development. I build full-stack applications and love programming,
               easy-to-understand user interfaces, and simple and efficient code implementations.
             </p>
 
-            <p className="paragraph">
+            <p>
               I have strong problem-solving skills and can efficiently and effectively develop
               high-quality software. I am a quick learner and am eager to expand my knowledge and
               skills in different areas of software development.
@@ -35,7 +35,7 @@ export default function About() {
 
           <div className="mb-5 py-3">
             <h2 className="text-2xl font-semibold mb-3 title">Skills and Abilities</h2>
-            <p className="paragraph mb-5">
+            <p className="mb-5">
               I specialize in web development using PHP and commonly work with MySQL and SQLite
               databases. Knowledgeable in using popular frameworks such as Laravel, React, and Vue
               and markup and scripting languages such as HTML, CSS, JavaScript, and TypeScript. For
@@ -44,19 +44,19 @@ export default function About() {
             </p>
 
             <div className="mb-5">
-              <p className="paragraph mb-3">Some of my Github Stats:</p>
+              <p className="mb-3">Some of my Github Stats:</p>
               <GithubStatsCard />
             </div>
 
             <div>
-              <p className="paragraph mb-3">Languages and Tools:</p>
+              <p className="mb-3">Languages and Tools:</p>
               <LanguagesAndTools />
             </div>
           </div>
 
           <div className="mb-5 py-3">
             <h2 className="text-2xl font-semibold mb-3 title">Interests</h2>
-            <p className="paragraph">
+            <p>
               I am also passionate about exploring new technologies and discovering how they can be
               applied to real-world problems. It&apos;s always exciting to learn about the latest
               trends and experiment with new tools and frameworks. I also enjoy sharing my knowledge
@@ -67,7 +67,7 @@ export default function About() {
 
           <div className="mb-5 py-3">
             <h2 className="text-2xl font-semibold mb-3 title">Professional Values</h2>
-            <p className="paragraph">
+            <p>
               I take pride in my work and strive to deliver the best possible results. Good
               attention to detail, clear communication, and a strong work ethic are the keys to
               success in any project. As a software engineer, I am committed to writing clean,
@@ -78,7 +78,7 @@ export default function About() {
 
           <div className="mb-5 py-3">
             <h2 className="text-2xl font-semibold mb-3 title">Conclusion</h2>
-            <p className="paragraph">
+            <p>
               Thank you for taking the time to learn a little bit about me and my journey in web
               development and software engineering. I am passionate about creating efficient,
               effective, and elegant solutions to challenging problems and I strive to continuously

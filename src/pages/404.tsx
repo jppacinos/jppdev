@@ -23,7 +23,7 @@ const NotFound = (): JSX.Element => {
             <h1 className="text-4xl font-semibold mb-3">
               <div className="flex space-x-3 title">Oops!</div>
             </h1>
-            <p className="paragraph ">404 Page Not Found {':('}</p>
+            <p>404 Page Not Found {':('}</p>
           </div>
 
           <Link
