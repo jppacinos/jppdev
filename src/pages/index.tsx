@@ -41,10 +41,7 @@ export default function Home() {
               <p className="my-10">{'>'} Hello World!</p>
             </div>
 
-            <Link
-              href="/about"
-              className="font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500"
-            >
+            <Link href="/about" className="btn-primary btn-primary-active font-semibold">
               Learn More &rarr;
             </Link>
           </div>
