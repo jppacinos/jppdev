@@ -3,7 +3,22 @@
 {
   "name": "Node.js & TypeScript",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "nodeGypDependencies": true,
+      "version": "lts",
+      "nvmVersion": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+    }
+  },
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -15,24 +30,7 @@
   // "postCreateCommand": "yarn install",
 
   // Configure tool-specific properties.
-  "customizations": {
-    // Configure properties specific to VS Code.
-    "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
-      "extensions": [
-        "bradlc.vscode-tailwindcss",
-        "esbenp.prettier-vscode",
-        "EditorConfig.EditorConfig",
-        "redhat.vscode-yaml",
-        "streetsidesoftware.code-spell-checker",
-        "steoates.autoimport",
-        "mgmcdermott.vscode-language-babel",
-        "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense",
-        "esbenp.prettier-vscode"
-      ]
-    }
-  },
+  // "customizations": {},
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   "remoteUser": "root"
