@@ -3,9 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    // enable dangerous use of SVG images
-    dangerouslyAllowSVG: true,
-
     remotePatterns: [
       {
         protocol: 'https',
@@ -29,4 +26,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig
