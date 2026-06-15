@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 
 import Link, { LinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -7,7 +8,7 @@ export interface AppNavLinkProps extends LinkProps {
   children: React.ReactNode
 }
 
-const AppNavLink = ({ href, ...rest }: AppNavLinkProps): JSX.Element => {
+const AppNavLink = ({ href, ...rest }: AppNavLinkProps): React.ReactElement => {
   const pathname = usePathname()
 
   return (

@@ -1,3 +1,4 @@
+import React from "react";
 import LinkedInIcon from './icons/LinkedInIcon'
 import GithubIcon from './icons/GithubIcon'
 import MailIcon from './icons/MailIcon'
@@ -6,7 +7,7 @@ export interface AppFooterProps {
   //
 }
 
-const AppFooter = (): JSX.Element => {
+const AppFooter = (): React.ReactElement => {
   return (
     <ul className="flex align-center space-x-7">
       <li>

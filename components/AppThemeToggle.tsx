@@ -1,4 +1,5 @@
 'use client'
+import React from "react";
 
 import { ThemeMode, useTheme } from '@/lib/theme'
 import MoonIcon from './icons/MoonIcon'
@@ -12,7 +13,7 @@ export interface AppThemeToggleProps {
   //
 }
 
-const AppThemeToggle = (): JSX.Element => {
+const AppThemeToggle = (): React.ReactElement => {
   const { mode, setMode } = useTheme()
 
   function renderIcon() {

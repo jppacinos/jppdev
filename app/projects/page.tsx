@@ -46,7 +46,7 @@ async function getData(): Promise<Repo[]> {
     next: { tags: ['projects'] },
   })
 
-  const repos: Repo[] = await response.json()
+  const data = await response.json(); const repos: Repo[] = Array.isArray(data) ? data : [];
 
   if (process.env.NODE_ENV !== 'production') {
     return repos.map<Repo>((data) => ({
