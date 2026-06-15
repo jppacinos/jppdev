@@ -1,3 +1,4 @@
+import React from "react";
 import Link from 'next/link'
 import AppThemeToggle from './AppThemeToggle'
 import GithubIcon from './icons/GithubIcon'
@@ -7,7 +8,7 @@ export interface AppHeaderProps {
   //
 }
 
-const AppHeader = (): JSX.Element => {
+const AppHeader = (): React.ReactElement => {
   return (
     <div className="flex flex-row flex-nowrap justify-between sm:items-center py-3 sm:py-6">
       <div className="flex flex-col space-y-3">
@@ -50,7 +51,7 @@ export default AppHeader
 
 //
 
-function AppLogo(): JSX.Element {
+function AppLogo(): React.ReactElement {
   return (
     <div className="font-semibold text-2xl" style={{ fontFamily: 'sans-serif' }}>
       <Link href="/" className="dark:text-white/90">
@@ -60,7 +61,7 @@ function AppLogo(): JSX.Element {
   )
 }
 
-function NavLists(): JSX.Element {
+function NavLists(): React.ReactElement {
   return (
     <>
       <li>

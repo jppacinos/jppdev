@@ -1,3 +1,4 @@
+import React from "react";
 import CalendarIcon from '@/components/icons/CalendarIcon'
 import LinkIcon from '@/components/icons/LinkIcon'
 import ScaleIcon from '@/components/icons/ScaleIcon'
@@ -24,7 +25,7 @@ export interface RepoCardProps {
   data: Repo
 }
 
-const RepoCard = ({ data }: RepoCardProps): JSX.Element => {
+const RepoCard = ({ data }: RepoCardProps): React.ReactElement => {
   return (
     <div className="repo-card">
       <div className="mb-5">
@@ -101,7 +102,7 @@ export default RepoCard
 
 const yearNow = new Date().getFullYear()
 
-function RepoDate({ date }: { date: string }): JSX.Element {
+function RepoDate({ date }: { date: string }): React.ReactElement {
   const dateObj = new Date(date)
   const month = dateObj.toLocaleString('default', { month: 'short' })
   const day = dateObj.getDate()
@@ -115,6 +116,6 @@ function RepoDate({ date }: { date: string }): JSX.Element {
   )
 }
 
-function Pill({ children }: { children: React.ReactNode }): JSX.Element {
+function Pill({ children }: { children: React.ReactNode }): React.ReactElement {
   return <span className="pill-default">{children}</span>
 }

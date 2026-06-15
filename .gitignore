@@ -43,3 +43,6 @@ next-env.d.ts
 /public/sitemap.xml
 /public/sitemap-*.xml
 /public/robots.txt
+
+# misc
+.pnpm-store

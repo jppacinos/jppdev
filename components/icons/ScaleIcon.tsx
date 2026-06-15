@@ -1,8 +1,9 @@
+import React from "react";
 export interface ScaleIconProps extends React.SVGProps<SVGSVGElement> {
   //
 }
 
-const ScaleIcon = (props: ScaleIconProps): JSX.Element => {
+const ScaleIcon = (props: ScaleIconProps): React.ReactElement => {
   return (
     <svg
       version="1.0"
