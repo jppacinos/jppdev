@@ -12,8 +12,7 @@ export default function Home() {
             alt="Jhon Peter Pacinos"
             fill
             style={{
-              maxWidth: "100%",
-              height: "auto"
+              objectFit: "cover"
             }} />
         </div>
         <h1 className="text-3xl font-semibold mb-5">Jhon Peter Pacinos</h1>
