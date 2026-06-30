@@ -1,11 +1,22 @@
 'use client'
 
-import { useTheme } from '@/lib/theme'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 /* eslint-disable @next/next/no-img-element */
 export function GithubStatsCard() {
-  const { theme, mode, systemTheme } = useTheme()
-  const isDark = theme === 'dark' || (mode === 'auto' && systemTheme === 'dark')
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  const isDark = resolvedTheme === 'dark'
 
   const statsDefault = `https://github-readme-stats.vercel.app/api?username=jppacinos&locale=en&hide_title=true&hide_border=true&show_icons=true${
     isDark ? '&theme=dark#gh-dark-mode-only' : ''

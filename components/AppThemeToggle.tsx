@@ -1,25 +1,34 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useTheme } from 'next-themes'
 
-import { ThemeMode, useTheme } from '@/lib/theme'
 import MoonIcon from './icons/MoonIcon'
 import SunIcon from './icons/SunIcon'
 import ThemeLightDarkIcon from './icons/ThemeLightDarkIcon'
 
-let index = 0
-let themes: ThemeMode[] = ['auto', 'light', 'dark']
+const themes = ['system', 'light', 'dark']
 
 export interface AppThemeToggleProps {
   //
 }
 
-const AppThemeToggle = (): React.ReactElement => {
-  const { mode, setMode } = useTheme()
+const AppThemeToggle = (): React.ReactElement | null => {
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   function renderIcon() {
-    if (mode === 'auto') return <ThemeLightDarkIcon className="svg-icon dark:fill-slate-300" />
+    if (theme === 'system') return <ThemeLightDarkIcon className="svg-icon dark:fill-slate-300" />
 
-    if (mode === 'dark') {
+    if (theme === 'dark') {
       return <SunIcon className="svg-icon dark:fill-slate-300" />
     } else {
       return <MoonIcon className="svg-icon dark:fill-slate-300" />
@@ -27,8 +36,9 @@ const AppThemeToggle = (): React.ReactElement => {
   }
 
   function handleNextTheme() {
-    index = (index + 1) % themes.length
-    setMode(themes[index])
+    const currentIndex = themes.indexOf(theme || 'system')
+    const nextIndex = (currentIndex + 1) % themes.length
+    setTheme(themes[nextIndex])
   }
 
   return (
